@@ -44,15 +44,18 @@ export default function LoginScreen() {
        
         <h2 className="text-3xl font-semibold text-center mb-30">Login</h2>
 
-        {/* Social buttons */}
-        <div className="flex justify-center gap-4 mb-4">
-          <button className="flex items-center gap-2 bg-white text-black py-2 px-4 rounded-full w-full justify-center text-sm">
-            <FaGoogle /> Google
+        <div className="flex space-x-4 mb-6">
+          {/* Social buttons */}
+        <button className="flex-1 flex items-center justify-center space-x-2  bg-transparent border-2 border-gray-300 hover:bg-blue-950 hover:text-black text-white py-2 rounded-lg">
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" className="w-5 h-5" />
+            <span>Google</span>
           </button>
-          <button className="flex items-center gap-2 bg-[#082eb4] text-white py-2 px-4 rounded-full w-full justify-center text-sm">
-            <FaFacebookF /> Facebook
+          <button className="flex-1 flex items-center justify-center space-x-2  bg-transparent border-2 border-gray-300 hover:bg-blue-950 hover:text-black text-white py-2 rounded-lg">
+            <img src="https://www.svgrepo.com/show/475647/facebook-color.svg" alt="Facebook" className="w-5 h-5" />
+            <span>Facebook</span>
           </button>
         </div>
+       
 
         {/* Divider */}
         <div className="flex items-center my-4">
@@ -104,9 +107,9 @@ export default function LoginScreen() {
 
           {/* Forgot Password */}
           <div className="text-right mb-4">
-            <a href="#" className="text-base text-[#ee7262] hover:underline">
+            <Link to="/forgot" className="text-base text-gray hover:underline">
               Forgot Password?
-            </a>
+            </Link>
           </div>
 
           {/* Login Button */}
@@ -121,9 +124,9 @@ export default function LoginScreen() {
         {/* Signup */}
         <p className="text-center mt-4 text-base text-gray-400">
           Do you already have an account?{' '}
-          <a href="#" className="text-[#ee7262] hover:underline">
-            Sign up now
-          </a>
+          <Link to="/signup" className="text-gray-400 hover:underline">
+            SignUp now
+          </Link>
         </p>
       </div>
     </div>
