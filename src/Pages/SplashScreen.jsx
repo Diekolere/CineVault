@@ -63,12 +63,12 @@ export default function SplashScreen(){
           </p>
 
           <form onSubmit={handleSignUp} className="mt-5 mx-auto max-w-[300px]">
-            <button 
-              type="submit"
+            <Link 
+            to="/signup"
               className="mt-2 px-6 py-2 bg-gradient-to-r from-[#082eb4] to-[#640707] hover:opacity-90 text-white rounded-full transition"
             >
               Sign up
-            </button>
+            </Link>
           </form>
 
           <p className="mt-2 text-gray-200 text-sm">
