@@ -12,12 +12,10 @@ const Home = () => {
   const [movies, setMovies] = useState({ new: [], upcoming: [] });
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/movies')
+    fetch('https://cinevault-backend-cqzt.onrender.com/api/movies')
       .then((res) => res.json())
-      .then((data) => {
-        console.log('Movies from backend:', data);
-        setMovies(data);
-      })
+      .then((data) => setMovies(data))
+    
       .catch((err) => console.error('Error:', err));
   }, []);
 
